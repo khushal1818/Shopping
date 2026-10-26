@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://shopping-8pfs.onrender.com/api/:path*"
+    }
+  ]
+}
