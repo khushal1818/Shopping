@@ -136,6 +136,7 @@ const Navbar = () => {
                 <li onClick={() => { handleLinkClick("mens") }}><Link style={{ textDecoration: 'none' }} to='/mens'>Men</Link>{menu === "mens" ? <hr /> : <></>}</li>
                 <li onClick={() => { handleLinkClick("womens") }}><Link style={{ textDecoration: 'none' }} to='/womens'>Women</Link>{menu === "womens" ? <hr /> : <></>}</li>
                 <li onClick={() => { handleLinkClick("kids") }}><Link style={{ textDecoration: 'none' }} to='/kids'>Kids</Link>{menu === "kids" ? <hr /> : <></>}</li>
+              
                 
                 {/* Mobile-only profile items when logged in */}
                 {user && (

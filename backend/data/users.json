@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": "e94ce8b6-3706-4e87-8fe7-678e5271ec78",
+    "name": "parth",
+    "email": "parth@gmail.com",
+    "password": "$2b$10$.90nWDqQvUR8anIGxj5.b.xqFEDtvKLICe31nuBsiZeYYaJ04GIyi",
+    "createdAt": "2026-10-26T05:59:12.715Z"
+  }
+]
