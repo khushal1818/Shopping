@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Context/AuthContext';
+import { apiUrl } from '../api';
 import './CSS/Profile.css';
 
 const Profile = () => {
@@ -13,7 +14,7 @@ const Profile = () => {
     let isMounted = true;
     const fetchProfile = async () => {
       try {
-        const res = await fetch('/api/auth/profile', {
+        const res = await fetch(apiUrl('/api/auth/profile'), {
           credentials: 'include',
         });
         if (res.ok) {

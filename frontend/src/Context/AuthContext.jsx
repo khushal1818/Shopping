@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect, useCallback, useContext } from 'react';
+import { apiUrl } from '../api';
 
 export const AuthContext = createContext(null);
 
@@ -9,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   // Check current session from HttpOnly cookie
   const checkAuth = useCallback(async () => {
     try {
-      const response = await fetch('/api/auth/me', {
+      const response = await fetch(apiUrl('/api/auth/me'), {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -37,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
   // Login handler
   const login = async ({ email, password }) => {
-    const response = await fetch('/api/auth/login', {
+    const response = await fetch(apiUrl('/api/auth/login'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +59,7 @@ export const AuthProvider = ({ children }) => {
 
   // Register handler
   const register = async ({ name, email, password, confirmPassword }) => {
-    const response = await fetch('/api/auth/register', {
+    const response = await fetch(apiUrl('/api/auth/register'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -80,7 +81,7 @@ export const AuthProvider = ({ children }) => {
   // Logout handler
   const logout = async () => {
     try {
-      await fetch('/api/auth/logout', {
+      await fetch(apiUrl('/api/auth/logout'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

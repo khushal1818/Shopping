@@ -11,13 +11,15 @@ const authMiddleware = require('./authMiddleware');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'vistora_super_secret_jwt_key_2026_auth_secure';
-const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
+const CLIENT_URL = process.env.CLIENT_URL || 'https://shopping-vistora.vercel.app';
+const isProduction = process.env.NODE_ENV === 'production';
 
 // CORS configuration supporting credentials (cookies)
 const allowedOrigins = [
   'http://localhost:5173',
   'http://127.0.0.1:5173',
   'http://localhost:3000',
+  'https://shopping-vistora.vercel.app',
   CLIENT_URL
 ].filter(Boolean);
 
@@ -26,7 +28,7 @@ app.use(cors({
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(null, true); // Allow during dev
+      callback(new Error(`Origin ${origin} is not allowed by CORS`));
     }
   },
   credentials: true
@@ -38,8 +40,8 @@ app.use(cookieParser());
 // Cookie configuration
 const getCookieOptions = () => ({
   httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
-  sameSite: 'lax',
+  secure: isProduction,
+  sameSite: isProduction ? 'none' : 'lax',
   maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
 });
 
@@ -244,8 +246,8 @@ app.get('/api/auth/profile', authMiddleware, (req, res) => {
 app.post('/api/auth/logout', (req, res) => {
   res.clearCookie('token', {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax'
+    secure: isProduction,
+    sameSite: isProduction ? 'none' : 'lax'
   });
 
   return res.status(200).json({
