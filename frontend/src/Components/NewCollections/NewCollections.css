@@ -1,0 +1,119 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 20px;
+    margin-bottom: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.new-collections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+    border: none;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+    gap: 30px;
+    max-width: 1280px;
+    width: 100%;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* 1024px - 1280px Laptops */
+@media (max-width: 1280px) {
+    .new-collections h1 {
+        font-size: 40px;
+    }
+    .collections {
+        gap: 20px;
+    }
+}
+
+/* 768px - 1024px Tablets */
+@media (max-width: 1024px) {
+    .new-collections {
+        margin-bottom: 70px;
+    }
+    .new-collections h1 {
+        font-size: 34px;
+    }
+    .new-collections hr {
+        width: 150px;
+        height: 5px;
+    }
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 700px;
+        margin-top: 35px;
+    }
+}
+
+/* 480px - 768px */
+@media (max-width: 768px) {
+    .new-collections {
+        padding: 30px 15px;
+        margin-bottom: 50px;
+    }
+    .new-collections h1 {
+        font-size: 26px;
+    }
+    .new-collections hr {
+        width: 120px;
+        height: 4px;
+    }
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 25px;
+    }
+}
+
+/* 320px - 480px Mobile */
+@media (max-width: 480px) {
+    .new-collections {
+        padding: 20px 12px;
+        margin-bottom: 40px;
+    }
+    .new-collections h1 {
+        font-size: 20px;
+    }
+    .new-collections hr {
+        width: 80px;
+        height: 3px;
+    }
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 20px;
+    }
+}
+
+/* Tiny Mobile (320px - 360px) */
+@media (max-width: 360px) {
+    .new-collections h1 {
+        font-size: 18px;
+    }
+    .collections {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+    }
+}

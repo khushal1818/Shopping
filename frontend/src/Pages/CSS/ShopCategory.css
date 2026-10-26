@@ -1,0 +1,195 @@
+.shop-category {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.shopcategory-banner {
+    display: block;
+    margin: 30px auto;
+    width: 82%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.shopcategory-indexSort {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 82%;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.shopcategory-sort {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.shopcategory-sort img {
+    width: 12px;
+}
+
+.shopcategory-indexSort p {
+    font-size: 16px;
+    color: #555;
+}
+
+.shopcategory-indexSort p span {
+    font-weight: 600;
+    color: #171717;
+}
+
+.shopcategory-products {
+    margin: 20px auto;
+    max-width: 1280px;
+    width: 82%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 60px;
+    column-gap: 24px;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+.shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.shopcategory-loadmore:hover {
+    background: #e0e0e0;
+    color: #555;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* 1024px - 1280px Laptops */
+@media (max-width: 1280px) {
+    .shopcategory-banner,
+    .shopcategory-indexSort,
+    .shopcategory-products {
+        width: 88%;
+    }
+    .shopcategory-products {
+        column-gap: 20px;
+        row-gap: 50px;
+    }
+}
+
+/* 768px - 1024px Tablets */
+@media (max-width: 1024px) {
+    .shopcategory-banner,
+    .shopcategory-indexSort,
+    .shopcategory-products {
+        width: 90%;
+    }
+    .shopcategory-products {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 40px;
+        column-gap: 18px;
+    }
+    .shopcategory-loadmore {
+        margin: 70px auto;
+        width: 200px;
+        height: 58px;
+        font-size: 16px;
+    }
+}
+
+/* 480px - 768px */
+@media (max-width: 768px) {
+    .shopcategory-banner {
+        width: 94%;
+        margin: 20px auto;
+    }
+    .shopcategory-indexSort {
+        width: 94%;
+        margin: 0 auto;
+    }
+    .shopcategory-products {
+        width: 94%;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+        column-gap: 16px;
+    }
+    .shopcategory-indexSort p {
+        font-size: 14px;
+    }
+    .shopcategory-sort {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    .shopcategory-loadmore {
+        margin: 50px auto;
+        width: 180px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile Screens: 320px - 480px */
+@media (max-width: 480px) {
+    .shopcategory-banner {
+        width: 94%;
+        margin: 15px auto;
+    }
+    .shopcategory-indexSort {
+        width: 94%;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .shopcategory-indexSort p {
+        font-size: 12px;
+    }
+    .shopcategory-sort {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .shopcategory-products {
+        width: 94%;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 10px;
+        margin: 15px auto;
+    }
+    .shopcategory-loadmore {
+        margin: 35px auto;
+        width: 150px;
+        height: 44px;
+        font-size: 14px;
+    }
+}
+
+/* Tiny Mobile (320px - 360px) */
+@media (max-width: 360px) {
+    .shopcategory-indexSort {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .shopcategory-products {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+    }
+}

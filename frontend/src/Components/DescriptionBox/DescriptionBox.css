@@ -1,0 +1,91 @@
+.descriptionbox {
+    margin: 80px auto;
+    max-width: 1250px;
+    width: 82%;
+    box-sizing: border-box;
+}
+
+.descriptionbox-navigator {
+    display: flex;
+}
+
+.descriptionbox-nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 171px;
+    height: 70px;
+    border: 1px solid #d0d0d0;
+    box-sizing: border-box;
+}
+
+.descriptionbox-nav-box.fade {
+    background: #FBFBFB;
+    color: #555;
+}
+
+.descriptionbox-description {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 1px solid #D0D0D0;
+    padding: 48px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4a4a4a;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* 1024px Tablets / Laptops */
+@media (max-width: 1024px) {
+    .descriptionbox {
+        width: 90%;
+        margin: 50px auto;
+    }
+    .descriptionbox-description {
+        padding: 30px;
+        padding-bottom: 40px;
+    }
+}
+
+/* 768px Tablets */
+@media (max-width: 768px) {
+    .descriptionbox {
+        width: 94%;
+        margin: 40px auto;
+    }
+    .descriptionbox-nav-box {
+        width: 140px;
+        height: 52px;
+        font-size: 14px;
+    }
+    .descriptionbox-description {
+        padding: 24px;
+        gap: 16px;
+        font-size: 14px;
+    }
+}
+
+/* 480px Mobile */
+@media (max-width: 480px) {
+    .descriptionbox {
+        margin: 30px auto;
+    }
+    .descriptionbox-nav-box {
+        flex: 1;
+        width: auto;
+        height: 44px;
+        font-size: 13px;
+    }
+    .descriptionbox-description {
+        padding: 16px;
+        gap: 12px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}

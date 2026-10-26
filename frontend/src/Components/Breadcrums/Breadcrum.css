@@ -1,0 +1,48 @@
+.breadcrum {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 40px auto 20px;
+    width: 82%;
+    max-width: 1250px;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+.breadcrum img {
+    width: 8px;
+    height: auto;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+    .breadcrum {
+        width: 90%;
+        margin: 25px auto 15px;
+        font-size: 14px;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrum {
+        width: 94%;
+        margin: 18px auto 12px;
+        font-size: 13px;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrum {
+        width: 94%;
+        margin: 14px auto 10px;
+        font-size: 12px;
+        gap: 4px;
+    }
+}

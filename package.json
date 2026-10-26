@@ -1,0 +1,12 @@
+{
+  "name": "vistora-ecommerce",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vistora React + Vite e-commerce website with real authentication",
+  "scripts": {
+    "start": "node backend/server.js",
+    "backend": "node backend/server.js",
+    "frontend": "npm --prefix frontend run dev",
+    "test:auth": "node backend/test_auth.js"
+  }
+}

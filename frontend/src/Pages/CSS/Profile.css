@@ -1,0 +1,180 @@
+.profile-page {
+    width: 100%;
+    min-height: 80vh;
+    background: #fbfbfb;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #ff4141;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(255, 65, 65, 0.3);
+}
+
+.profile-title h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #171717;
+}
+
+.profile-email {
+    margin: 4px 0 8px 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.profile-badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.profile-content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 24px;
+    background: #fafafa;
+}
+
+.profile-card h3 {
+    margin: 0 0 18px 0;
+    font-size: 18px;
+    color: #222;
+}
+
+.profile-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-label {
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #171717;
+    font-weight: 500;
+}
+
+.orders-empty {
+    text-align: center;
+    padding: 30px 10px;
+    color: #777;
+}
+
+.empty-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.shop-now-btn {
+    margin-top: 15px;
+    background: #ff4141;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.shop-now-btn:hover {
+    background: #e63838;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.profile-logout-btn {
+    background: #fff;
+    color: #ff4141;
+    border: 1.5px solid #ff4141;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile-logout-btn:hover {
+    background: #ff4141;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 24px 18px;
+    }
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 14px;
+    }
+    .profile-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-actions {
+        justify-content: center;
+    }
+    .profile-logout-btn {
+        width: 100%;
+    }
+}

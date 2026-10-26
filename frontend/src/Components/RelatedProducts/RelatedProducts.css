@@ -1,0 +1,116 @@
+.relatedproducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px 20px 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.relatedproducts h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.relatedproducts hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+    border: none;
+}
+
+.relatedproducts-item {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1280px;
+    width: 100%;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* 1024px - 1280px Laptops */
+@media (max-width: 1280px) {
+    .relatedproducts h1 {
+        font-size: 40px;
+    }
+    .relatedproducts-item {
+        gap: 20px;
+    }
+}
+
+/* 768px - 1024px Tablets */
+@media (max-width: 1024px) {
+    .relatedproducts {
+        padding: 30px 20px 60px;
+    }
+    .relatedproducts h1 {
+        font-size: 34px;
+    }
+    .relatedproducts hr {
+        width: 150px;
+        height: 5px;
+    }
+    .relatedproducts-item {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 700px;
+        margin-top: 35px;
+    }
+}
+
+/* 480px - 768px */
+@media (max-width: 768px) {
+    .relatedproducts {
+        padding: 25px 15px 45px;
+    }
+    .relatedproducts h1 {
+        font-size: 26px;
+    }
+    .relatedproducts hr {
+        width: 120px;
+        height: 4px;
+    }
+    .relatedproducts-item {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 25px;
+    }
+}
+
+/* 320px - 480px Mobile */
+@media (max-width: 480px) {
+    .relatedproducts {
+        padding: 20px 12px 35px;
+    }
+    .relatedproducts h1 {
+        font-size: 20px;
+    }
+    .relatedproducts hr {
+        width: 80px;
+        height: 3px;
+    }
+    .relatedproducts-item {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 20px;
+    }
+}
+
+/* Tiny Mobile (320px - 360px) */
+@media (max-width: 360px) {
+    .relatedproducts h1 {
+        font-size: 18px;
+    }
+    .relatedproducts-item {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+    }
+}
